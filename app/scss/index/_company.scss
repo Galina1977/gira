@@ -1,0 +1,121 @@
+.company {
+   padding: 175px 0 145px;
+   background-color: #000;
+   &__heading {
+      margin-bottom: 75px;
+   }
+   &__inner {
+      display: flex;
+      position: relative;
+   }
+   &__gira {
+      position: absolute;
+      top: 0;
+      right: -9%;
+   }
+   &__box-info {
+      max-width: 585px;
+      margin-right: 100px;
+   }
+   &__text {
+      font-size: 18px;
+      line-height: 28px;
+      color: #fefefd;
+      & + & {
+         margin-top: 40px;
+      }
+   }
+   &__btn {
+      margin-top: 60px;
+   }
+   &__box-img {
+      position: relative;
+      &::before {
+         content: "";
+         width: 366px;
+         height: 377px;
+         background-color: #edd28a;
+         position: absolute;
+         top: 0;
+         left: 20px;
+         z-index: 4;
+      }
+   }
+   &__img {
+      max-width: 366px;
+      height: 377px;
+      object-fit: cover;
+      box-shadow: 20px 20px 50px 20px rgba(0, 0, 0, 0.8);
+      position: relative;
+      z-index: 5;
+      margin-top: 20px;
+   }
+}
+
+@media (max-width: 1200px) {
+   .company {
+      padding: 140px 0 125px;
+      &__inner {
+         flex-direction: column;
+         align-items: center;
+      }
+      &__box-img {
+         order: -1;
+         margin-bottom: 40px;
+      }
+      &__box-info {
+         max-width: 100%;
+         margin-right: 0;
+         text-align: center;
+      }
+      &__text {
+         text-align: left;
+         & + & {
+            margin-top: 25px;
+         }
+      }
+      &__btn {
+         margin-top: 40px;
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .company {
+      padding: 90px 0 100px;
+      &__gira {
+         display: none;
+      }
+      &__heading {
+         margin-bottom: 50px;
+      }
+      &__box-img {
+         display: none;
+      }
+   }
+}
+
+@media (max-width: 576px) {
+   .company {
+      padding: 70px 0 80px;
+      &__heading {
+         margin-bottom: 35px;
+      }
+   }
+}
+
+@media (max-width: 360px) {
+   .company {
+      padding: 55px 0 65px;
+      &__heading {
+         margin-bottom: 25px;
+      }
+      &__text {
+         font-size: 17px;
+         line-height: 26px;
+      }
+      &__btn {
+         margin-top: 25px;
+      }
+   }
+}

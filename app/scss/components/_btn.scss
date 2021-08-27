@@ -1,0 +1,28 @@
+.btn {
+   display: inline-block;
+   text-align: center;
+   padding: 12px 37px;
+   font-size: 14px;
+   line-height: 16px;
+   text-transform: uppercase;
+   background-color: transparent;
+   color: #edd28a;
+   border: 2px solid #edd28a;
+   border-radius: 22px;
+   transition: color 0.4s, border 0.4s, background 0.4s;
+   &:hover {
+      color: #fff;
+      border: 2px solid #fff;
+      background-color: #0c0c0c;
+   }
+   &:focus {
+      color: #020202;
+      background-color: #edd28a;
+      border: 2px solid #020202;
+   }
+   &:active {
+      color: #fff;
+      border: 2px solid #fff;
+      background-color: #0c0c0c;
+   }
+}

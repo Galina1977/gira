@@ -1,0 +1,39 @@
+.social {
+   &__link {
+      display: inline-block;
+      padding: 5px;
+      & + & {
+         margin-left: 5px;
+      }
+   }
+   &__icon {
+      fill: #fdfdfd;
+      transition: fill 0.4s;
+      &:hover {
+         fill: #edd28a;
+      }
+      &--facebook {
+         width: 10px;
+         height: 18px;
+      }
+      &--vk {
+         width: 18px;
+         height: 12px;
+      }
+      &--odnoklassniki {
+         width: 12px;
+         height: 18px;
+      }
+   }
+   &--mobile {
+      display: none;
+   }
+}
+
+@media (max-width: 992px) {
+   .social {
+      &--mobile {
+         display: block;
+      }
+   }
+}

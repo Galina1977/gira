@@ -1,0 +1,38 @@
+.gira {
+   max-width: 265px;
+   transform: rotate(-90deg);
+   padding: 0 20px;
+   &::before,
+   &::after {
+      content: "";
+      display: inline-block;
+      width: 1px;
+      height: 267px;
+      opacity: 0.29;
+      background-color: #ffffff;
+      position: absolute;
+      top: -64%;
+      transform: rotate(-90deg);
+   }
+   &::before {
+      left: -45%;
+   }
+   &::after {
+      right: -30%;
+   }
+   &__name {
+      @extend%roboto-700;
+      font-size: 80px;
+      line-height: 90px;
+      text-transform: uppercase;
+      letter-spacing: 10.2px;
+      color: #edd28a;
+      opacity: 0.09;
+   }
+   &__description {
+      @extend%roboto-400;
+      font-size: 18px;
+      line-height: 22px;
+      opacity: 0.25;
+   }
+}
