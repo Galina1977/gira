@@ -22,7 +22,7 @@
 
 .gallery-slider {
    &__img {
-      width: 1040px;
+      width: 1038px;
       height: 431px;
       object-fit: cover;
       object-position: center;
@@ -32,6 +32,7 @@
 .gallery-mini-slider {
    &__slide {
       padding: 35px 4px 0 4px;
+      height: auto;
       cursor: pointer;
       opacity: 0.2;
       transition: opacity 0.3s ease 0s;
@@ -53,7 +54,7 @@
 }
 
 .gallery-slider.swiper-container {
-   width: 1040px;
+   width: 1038px;
    height: 431px;
    overflow: hidden;
    overflow-y: hidden;
@@ -62,7 +63,7 @@
 }
 .gallery-mini-slider.swiper-container {
    width: 1040px;
-   height: 179px;
+   height: 216px;
    overflow: hidden;
    overflow-y: hidden;
    overflow-x: hidden;
@@ -119,6 +120,7 @@
 
    .gallery-mini-slider.swiper-container {
       width: 805px;
+      height: 163px;
    }
    .gallery-mini-slider {
       &__img {
@@ -148,7 +150,7 @@
 
    .gallery-mini-slider.swiper-container {
       width: 590px;
-      height: 115px;
+      height: 105px;
    }
    .gallery-mini-slider {
       &__img {
@@ -173,6 +175,7 @@
 
    .gallery-mini-slider.swiper-container {
       width: 425px;
+      height: 88px;
    }
    .gallery-mini-slider__slide {
       padding: 20px 4px 0 0;

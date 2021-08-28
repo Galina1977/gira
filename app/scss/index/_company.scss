@@ -29,6 +29,8 @@
       margin-top: 60px;
    }
    &__box-img {
+      max-width: 366px;
+      height: 377px;
       position: relative;
       &::before {
          content: "";

@@ -146,8 +146,8 @@
 @media (max-width: 576px) {
    .service-slider {
       &__title {
-         font-size: 19px;
-         line-height: 29px;
+         font-size: 17px;
+         line-height: 27px;
       }
       &__subtitle {
          font-size: 16px;
@@ -156,11 +156,24 @@
    }
 }
 
+@media (max-width: 450px) {
+   .service-slider {
+      &__content-inner {
+         padding-top: 95px;
+      }
+      &__image {
+         height: 390px;
+      }
+   }
+   .service-slider.swiper-container {
+      height: 390px;
+   }
+}
+
 @media (max-width: 360px) {
    .service-slider {
       &__title {
          padding-left: 0;
-         margin-bottom: 10px;
          &::before {
             display: none;
          }

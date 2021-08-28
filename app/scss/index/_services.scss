@@ -28,15 +28,17 @@
       }
    }
    &__img {
-      width: 100%;
-      height: 100%;
+      width: 331px;
+      height: 331px;
       object-fit: cover;
+      object-position: center;
    }
    &__box-content {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
       position: absolute;
       top: 0;
       left: 0;
@@ -76,7 +78,12 @@
    .services {
       padding: 80px 0 80px;
       &__item {
-         height: 271px;
+         width: 231px;
+         height: 231px;
+      }
+      &__img {
+         width: 231px;
+         height: 231px;
       }
    }
 }
@@ -93,15 +100,23 @@
 @media (max-width: 360px) {
    .services {
       &__item {
-         height: 191px;
+         width: 131px;
+         height: 131px;
+      }
+      &__img {
+         width: 131px;
+         height: 131px;
+      }
+      &__box-content {
+         border: 6px solid #edd28a;
       }
       &__name {
-         font-size: 20px;
-         line-height: 25px;
+         font-size: 18px;
+         line-height: 23px;
       }
       &__price {
-         font-size: 18px;
-         line-height: 20px;
+         font-size: 14px;
+         line-height: 16px;
       }
    }
 }

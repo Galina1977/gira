@@ -58,7 +58,7 @@
 @media (max-width: 1120px) {
    .header {
       &__top {
-         padding: 20px 0;
+         padding: 25px 0;
       }
       &__address {
          flex-direction: column;
@@ -99,6 +99,7 @@
          }
       }
       .address {
+         text-align: center;
          &--mobile {
             margin-top: 25px;
          }
@@ -107,6 +108,7 @@
          display: none;
       }
       .social {
+         text-align: center;
          &--mobile {
             margin-top: 25px;
          }
@@ -145,7 +147,7 @@
       &__burger {
          display: block;
          position: fixed;
-         top: 28px;
+         top: 27px;
          left: 25px;
          width: 35px;
          height: 20px;
@@ -195,16 +197,11 @@
       &__logo {
          display: none;
       }
-   }
-}
-
-@media (max-width: 450px) {
-   .header {
       .search {
-         width: 200px;
-         &__input {
-            width: 200px;
-         }
+         display: none;
+      }
+      &__burger {
+         top: 14px;
       }
    }
 }
