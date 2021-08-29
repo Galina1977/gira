@@ -47,17 +47,27 @@ $(function () {
       direction: "vertical",
       slidesPerView: 1,
       slidesPerGroup: 1,
-      simulateTouch: true,
-      touchRatio: 1,
-      touchAngle: 45,
-      grabCursor: true,
+      pagination: {
+         el: ".swiper-pagination",
+         clickable: true,
+      },
+
       effect: 'fade',
       fadeEffect: {
          crossFade: true
       },
-      pagination: {
-         el: ".swiper-pagination",
-         clickable: true,
+
+      autoplay: {
+         delay: 2000,
+         stopOnLastSlide: true,
+         disableOnInteraction: false,
+      },
+      speed: 800,
+
+      keyboard: {
+         enabled: true,
+         onlyInViewport: true,
+         pageUpDown: true,
       },
    });
 
