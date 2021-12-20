@@ -1,0 +1,112 @@
+.product-slide {
+   @include adaptiv-value("padding-top", 150, 30, 1);
+   @include adaptiv-value("padding-bottom", 150, 60, 1);
+   &__heading {
+      @include adaptiv-value("margin-bottom", 65, 45, 1);
+   }
+   &__gira {
+      position: absolute;
+      top: 30%;
+      left: -19%;
+      z-index: 5;
+   }
+   .gira {
+      &::before,
+      &::after {
+         display: none;
+      }
+   }
+   &__inner {
+      max-width: 1012px;
+      margin: 0 auto;
+      position: relative;
+   }
+}
+
+.product-slide-big {
+   &__img {
+      width: 100%;
+      @include adaptiv-value("height", 430, 220, 1);
+      object-fit: cover;
+      object-position: center;
+      margin: 0 auto;
+   }
+}
+
+.product-slide-thumb {
+   &__slider {
+      width: 1038px;
+      height: 200px;
+      padding-top: 15px;
+      margin: 0 auto;
+      .slick-center .product-slide-thumb__img {
+         background-color: #000;
+         opacity: 0.8;
+         transform: scale(1.08);
+      }
+   }
+   &__item {
+      cursor: pointer;
+   }
+   &__img {
+      width: 179px;
+      height: 179px;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.2;
+      background-color: #000;
+      transition: all 300ms ease;
+   }
+   .slick-prev,
+   .slick-next {
+      position: absolute;
+      left: -50px;
+      z-index: 15;
+      width: 28px;
+      height: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .slick-prev {
+      top: 50px;
+   }
+   .slick-next {
+      bottom: 50px;
+   }
+}
+
+@media (max-width: 1200px) {
+   .product-slide {
+      &__gira {
+         display: none;
+      }
+   }
+   .product-slide-thumb {
+      display: none;
+   }
+   .product-slide-big {
+      .slick-dots {
+         display: flex;
+         justify-content: center;
+         margin-top: 20px;
+      }
+      .slick-dots button {
+         display: block;
+         padding: 0;
+         font-size: 0;
+         width: 10px;
+         height: 10px;
+         background-color: #ccc;
+         border-radius: 50%;
+         cursor: pointer;
+         transition: color 0.4s;
+      }
+      .slick-dots li + li {
+         margin-left: 10px;
+      }
+      .slick-dots .slick-active button {
+         background-color: #edd28a;
+      }
+   }
+}

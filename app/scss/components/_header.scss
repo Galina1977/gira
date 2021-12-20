@@ -10,9 +10,6 @@
       display: flex;
       margin-right: auto;
    }
-   &__logo {
-      display: block;
-   }
    &__social {
       margin-left: 80px;
    }
@@ -24,12 +21,13 @@
    }
    &__list {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
    }
    &__item {
-      & + & {
-         margin-left: 40px;
+      &:not(:last-child) {
+         margin-right: 40px;
       }
    }
    &__link {
@@ -58,7 +56,7 @@
 @media (max-width: 1120px) {
    .header {
       &__top {
-         padding: 25px 0;
+         padding: 15px 0;
       }
       &__address {
          flex-direction: column;
@@ -89,32 +87,17 @@
       &__top {
          position: fixed;
          width: 100%;
-         background-color: #000;
+         background-color: #edd28a;
          z-index: 30;
       }
       &__address {
          display: none;
-         &__link--tel {
-            margin-bottom: 15px;
-         }
       }
-      .address {
-         text-align: center;
-         &--mobile {
-            margin-top: 25px;
-         }
+      &__logo {
+         display: none;
       }
       &__social {
          display: none;
-      }
-      .social {
-         text-align: center;
-         &--mobile {
-            margin-top: 25px;
-         }
-      }
-      &__logo {
-         margin-left: 100px;
       }
       &__menu {
          position: fixed;
@@ -134,10 +117,13 @@
       &__list {
          flex-direction: column;
       }
+      ul.header__list {
+         padding-top: 30px;
+      }
       &__item {
-         & + & {
-            margin-top: 15px;
-            margin-left: 0;
+         &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 15px;
          }
       }
       &__link {
@@ -155,7 +141,7 @@
          &::before,
          &::after {
             content: "";
-            background-color: #fff;
+            background-color: #000;
             position: absolute;
             width: 100%;
             height: 2px;
@@ -169,7 +155,7 @@
             bottom: 0;
          }
          span {
-            background-color: #fff;
+            background-color: #000;
             position: absolute;
             width: 100%;
             height: 2px;
@@ -188,20 +174,6 @@
       }
       .header__burger.active span {
          transform: scale(0);
-      }
-   }
-}
-
-@media (max-width: 768px) {
-   .header {
-      &__logo {
-         display: none;
-      }
-      .search {
-         display: none;
-      }
-      &__burger {
-         top: 14px;
       }
    }
 }

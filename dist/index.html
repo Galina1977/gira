@@ -8,17 +8,11 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Gira</title>
    <link rel="shortcut icon" href="/images/favicon.ico" type="image/favicon.ico">
-   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
    <header id="header" class="header">
-      <a id="scroller" class="scroller" href="#">
-         <svg class="scroller__arrow-scroll">
-            <use xlink:href="images/icons/arrow-scroll.svg#arrow-scroll"></use>
-         </svg>
-      </a>
       <div class="header__top">
          <div class="container">
             <div class="header__top-inner">
@@ -53,7 +47,7 @@
                <div class="header__search search">
                   <form class="search__form" action="#">
                      <label for="search" class="search__label">Поиск по сайту</label>
-                     <input id="search" class="search__input" type="text" name="search" placeholder="Поиск по сайту">
+                     <input id="search" class="search__input" type="text" name="text" placeholder="Поиск по сайту">
                      <button class="search__btn" type="submit">
                         <svg class="search__svg">
                            <use xlink:href="images/icons/search.svg#search"></use>
@@ -72,7 +66,7 @@
             <nav class="header__menu">
                <ul class="header__list">
                   <li class="header__item">
-                     <a class="header__link header__link--active" href="#">Главная</a>
+                     <a class="header__link header__link--active" href="#header">Главная</a>
                   </li>
                   <li class="header__item">
                      <a class="header__link" href="#company">О компании</a>
@@ -89,175 +83,114 @@
                   <li class="header__item">
                      <a class="header__link" href="#footer">Контакты</a>
                   </li>
+                  <li class="header__item">
+                     <div class="social social--mobile ">
+                        <a class="social__link" href="#!">
+                           <svg class="social__icon social__icon--facebook">
+                              <use xlink:href="images/icons/facebook.svg#facebook"></use>
+                           </svg>
+                        </a>
+                        <a class="social__link" href="#!">
+                           <svg class="social__icon social__icon--vk">
+                              <use xlink:href="images/icons/vk.svg#vk"></use>
+                           </svg>
+                        </a>
+                        <a class="social__link" href="#!">
+                           <svg class="social__icon social__icon--odnoklassniki">
+                              <use xlink:href="images/icons/odnoklassniki.svg#odnoklassniki"></use>
+                           </svg>
+                        </a>
+                     </div>
+                  </li>
+                  <li class="header__item">
+                     <address class="address address--mobile">
+                        <div class="address__item">
+                           <a class="address__link address__link--tel" href="tel:+74957715618">+7(495)771-56-18</a>
+                        </div>
+                        <div class="address__item">
+                           <a class="address__link address__link--mail" href="mailto:info@giragroup.">info@giragroup.ru</a>
+                        </div>
+                     </address>
+                  </li>
                </ul>
-               <div class="social social--mobile ">
-                  <a class="social__link" href="#!">
-                     <svg class="social__icon social__icon--facebook">
-                        <use xlink:href="images/icons/facebook.svg#facebook"></use>
-                     </svg>
-                  </a>
-                  <a class="social__link" href="#!">
-                     <svg class="social__icon social__icon--vk">
-                        <use xlink:href="images/icons/vk.svg#vk"></use>
-                     </svg>
-                  </a>
-                  <a class="social__link" href="#!">
-                     <svg class="social__icon social__icon--odnoklassniki">
-                        <use xlink:href="images/icons/odnoklassniki.svg#odnoklassniki"></use>
-                     </svg>
-                  </a>
-               </div>
-               <address class="address address--mobile">
-                  <div class="address__item">
-                     <a class="address__link address__link--tel" href="tel:+74957715618">+7(495)771-56-18</a>
-                  </div>
-                  <div class="address__item">
-                     <a class="address__link address__link--mail" href="mailto:info@giragroup.">info@giragroup.ru</a>
-                  </div>
-               </address>
             </nav>
          </div>
       </div>
    </header>
 
    <main class="main">
-      <div class="service-slider swiper-container">
-         <div class="service-slider__wrapper swiper-wrapper">
-            <div class="service-slider__slide swiper-slide">
-               <div class="service-slider__image" style="background-image: url(images/bg.webp);">
-                  <div class="service-slider__content">
-                     <div class="container">
-                        <div class="service-slider__content-inner">
-                           <div class="service-slider__title">
-                              фирма <span class="service-slider__color">«ГИРА»</span> поможет подобрать кровлю
-                              <span class="service-slider__font">для Вашей крыши дома</span>
-                           </div>
-                           <p class="service-slider__subtitle">
-                              Наша художественная мастерская может воплотить практически любой Ваш замысел, и что немало важно радовать Вас эти произведения искусства или просто практичные изделия будут очень долго, даже под открытым небом.
-                           </p>
-                           <div class="service-slider__gira gira">
-                              <span class="gira__name">Gira</span>
-                              <span class="gira__description">Фальцевая кровля и
-                                 художественная мастерская
-                              </span>
-                           </div>
+      <div class="service-slider">
+         <div class="service-slider__slider">
+            <div class="service-slider__column">
+               <div class="service-slider__item" style="background-image: url(images/bg.webp);">
+                  <div class="container">
+                     <div class="service-slider__content">
+                        <div class="service-slider__title">фирма <span class="service-slider__color">«ГИРА»</span> поможет подобрать кровлю
+                           <span class="service-slider__font">для Вашей крыши дома</span>
+                        </div>
+                        <p class="service-slider__subtitle">
+                           Наша художественная мастерская может воплотить практически любой Ваш замысел, и что немало важно радовать Вас эти произведения искусства или просто практичные изделия будут очень долго, даже под открытым небом.
+                        </p>
+                        <div class="service-slider__btn">
+                           <a class="btn" href="#!" target="_blank">Подробнее</a>
+                        </div>
+                        <div class="service-slider__gira gira">
+                           <span class="gira__name">Gira</span>
+                           <span class="gira__description">Фальцевая кровля и
+                              художественная мастерская
+                           </span>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
-            <div class="service-slider__slide swiper-slide">
-               <div class="service-slider__image" style="background-image: url(images/bg.webp);">
-                  <div class="service-slider__content">
-                     <div class="container">
-                        <div class="service-slider__content-inner">
-                           <div class="service-slider__title">
-                              фирма <span class="service-slider__color">«ГИРА»</span> поможет подобрать кровлю
-                              <span class="service-slider__font">для Вашей крыши дома</span>
-                           </div>
-                           <p class="service-slider__subtitle">
-                              Наша художественная мастерская может воплотить практически любой Ваш замысел, и что немало важно радовать Вас эти произведения искусства или просто практичные изделия будут очень долго, даже под открытым небом.
-                           </p>
-                           <div class="service-slider__gira gira">
-                              <div class="gira__name">Gira</div>
-                              <p class="gira__description">Фальцевая кровля и
-                                 художественная мастерская</p>
-                           </div>
+            <div class="service-slider__column">
+               <div class="service-slider__item" style="background-image: url(images/bg.webp);">
+                  <div class="container">
+                     <div class="service-slider__content">
+                        <div class="service-slider__title">фирма <span class="service-slider__color">«ГИРА»</span> поможет подобрать кровлю
+                           <span class="service-slider__font">для Вашей крыши дома</span>
+                        </div>
+                        <p class="service-slider__subtitle">
+                           Наша художественная мастерская может воплотить практически любой Ваш замысел, и что немало важно радовать Вас эти произведения искусства или просто практичные изделия будут очень долго, даже под открытым небом.
+                        </p>
+                        <div class="service-slider__btn">
+                           <a class="btn" href="#!" target="_blank">Подробнее</a>
+                        </div>
+                        <div class="service-slider__gira gira">
+                           <span class="gira__name">Gira</span>
+                           <span class="gira__description">Фальцевая кровля и
+                              художественная мастерская
+                           </span>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
-            <div class="service-slider__slide swiper-slide">
-               <div class="service-slider__image" style="background-image: url(images/bg.webp);">
-                  <div class="service-slider__content">
-                     <div class="container">
-                        <div class="service-slider__content-inner">
-                           <div class="service-slider__title">
-                              фирма <span class="service-slider__color">«ГИРА»</span> поможет подобрать кровлю
-                              <span class="service-slider__font">для Вашей крыши дома</span>
-                           </div>
-                           <p class="service-slider__subtitle">
-                              Наша художественная мастерская может воплотить практически любой Ваш замысел, и что немало важно радовать Вас эти произведения искусства или просто практичные изделия будут очень долго, даже под открытым небом.
-                           </p>
-                           <div class="service-slider__gira gira">
-                              <div class="gira__name">Gira</div>
-                              <p class="gira__description">Фальцевая кровля и
-                                 художественная мастерская</p>
-                           </div>
+            <div class="service-slider__column">
+               <div class="service-slider__item" style="background-image: url(images/bg.webp);">
+                  <div class="container">
+                     <div class="service-slider__content">
+                        <div class="service-slider__title">фирма <span class="service-slider__color">«ГИРА»</span> поможет подобрать кровлю
+                           <span class="service-slider__font">для Вашей крыши дома</span>
                         </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="service-slider__slide swiper-slide">
-               <div class="service-slider__image" style="background-image: url(images/bg.webp);">
-                  <div class="service-slider__content">
-                     <div class="container">
-                        <div class="service-slider__content-inner">
-                           <div class="service-slider__title">
-                              фирма <span class="service-slider__color">«ГИРА»</span> поможет подобрать кровлю
-                              <span class="service-slider__font">для Вашей крыши дома</span>
-                           </div>
-                           <p class="service-slider__subtitle">
-                              Наша художественная мастерская может воплотить практически любой Ваш замысел, и что немало важно радовать Вас эти произведения искусства или просто практичные изделия будут очень долго, даже под открытым небом.
-                           </p>
-                           <div class="service-slider__gira gira">
-                              <div class="gira__name">Gira</div>
-                              <p class="gira__description">Фальцевая кровля и
-                                 художественная мастерская</p>
-                           </div>
+                        <p class="service-slider__subtitle">
+                           Наша художественная мастерская может воплотить практически любой Ваш замысел, и что немало важно радовать Вас эти произведения искусства или просто практичные изделия будут очень долго, даже под открытым небом.
+                        </p>
+                        <div class="service-slider__btn">
+                           <a class="btn" href="#!" target="_blank">Подробнее</a>
                         </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="service-slider__slide swiper-slide">
-               <div class="service-slider__image" style="background-image: url(images/bg.webp);">
-                  <div class="service-slider__content">
-                     <div class="container">
-                        <div class="service-slider__content-inner">
-                           <div class="service-slider__title">
-                              фирма <span class="service-slider__color">«ГИРА»</span> поможет подобрать кровлю
-                              <span class="service-slider__font">для Вашей крыши дома</span>
-                           </div>
-                           <p class="service-slider__subtitle">
-                              Наша художественная мастерская может воплотить практически любой Ваш замысел, и что немало важно радовать Вас эти произведения искусства или просто практичные изделия будут очень долго, даже под открытым небом.
-                           </p>
-                           <div class="service-slider__gira gira">
-                              <div class="gira__name">Gira</div>
-                              <p class="gira__description">Фальцевая кровля и
-                                 художественная мастерская</p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="service-slider__slide swiper-slide">
-               <div class="service-slider__image" style="background-image: url(images/bg.webp);">
-                  <div class="service-slider__content">
-                     <div class="container">
-                        <div class="service-slider__content-inner">
-                           <div class="service-slider__title">
-                              фирма <span class="service-slider__color">«ГИРА»</span> поможет подобрать кровлю
-                              <span class="service-slider__font">для Вашей крыши дома</span>
-                           </div>
-                           <p class="service-slider__subtitle">
-                              Наша художественная мастерская может воплотить практически любой Ваш замысел, и что немало важно радовать Вас эти произведения искусства или просто практичные изделия будут очень долго, даже под открытым небом.
-                           </p>
-                           <div class="service-slider__gira gira">
-                              <div class="gira__name">Gira</div>
-                              <p class="gira__description">Фальцевая кровля и
-                                 художественная мастерская</p>
-                           </div>
+                        <div class="service-slider__gira gira">
+                           <span class="gira__name">Gira</span>
+                           <span class="gira__description">Фальцевая кровля и
+                              художественная мастерская
+                           </span>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-         <div class="swiper-pagination"></div>
       </div>
 
       <div id="company" class="company">
@@ -299,63 +232,81 @@
                   <div class="gira__name">Gira</div>
                </div>
                <a class="services__item" href="#!">
-                  <img class="services__img" src="images/content/services_1.webp" alt="Кровля">
+                  <div class="services__images _ibg">
+                     <img src="images/content/services_1.webp" alt="Кровля">
+                  </div>
                   <div class="services__box-content">
                      <span class="services__name">Кровля</span>
                      <span class="services__price">от 5000 р.</span>
                   </div>
                </a>
                <a class="services__item" href="#!">
-                  <img class="services__img" src="images/content/services_2.webp" alt="Кровля">
+                  <div class="services__images _ibg">
+                     <img src="images/content/services_2.webp" alt="Кровля">
+                  </div>
                   <div class="services__box-content">
                      <span class="services__name">Элементы кровли</span>
                      <span class="services__price">от 3000 р.</span>
                   </div>
                </a>
                <a class="services__item" href="#!">
-                  <img class="services__img" src="images/content/services_3.webp" alt="Кровля">
+                  <div class="services__images _ibg">
+                     <img src="images/content/services_3.webp" alt="Кровля">
+                  </div>
                   <div class="services__box-content">
                      <span class="services__name">Водосток</span>
                      <span class="services__price">от 6000 р.</span>
                   </div>
                </a>
                <a class="services__item" href="#!">
-                  <img class="services__img" src="images/content/services_4.webp" alt="Кровля">
+                  <div class="services__images _ibg">
+                     <img src="images/content/services_4.webp" alt="Кровля">
+                  </div>
                   <div class="services__box-content">
                      <span class="services__name">Интерьер</span>
                      <span class="services__price">от 4000 р.</span>
                   </div>
                </a>
                <a class="services__item" href="#!">
-                  <img class="services__img" src="images/content/services_5.webp" alt="Кровля">
+                  <div class="services__images _ibg">
+                     <img src="images/content/services_5.webp" alt="Кровля">
+                  </div>
                   <div class="services__box-content">
                      <span class="services__name">Экстерьер</span>
                      <span class="services__price">от 5000 р.</span>
                   </div>
                </a>
                <a class="services__item" href="#!">
-                  <img class="services__img" src="images/content/services_6.webp" alt="Кровля">
+                  <div class="services__images _ibg">
+                     <img src="images/content/services_6.webp" alt="Кровля">
+                  </div>
                   <div class="services__box-content">
                      <span class="services__name">Ковка</span>
                      <span class="services__price">от 8000 р.</span>
                   </div>
                </a>
                <a class="services__item" href="#!">
-                  <img class="services__img" src="images/content/services_7.webp" alt="Кровля">
+                  <div class="services__images _ibg">
+                     <img src="images/content/services_7.webp" alt="Кровля">
+                  </div>
                   <div class="services__box-content">
                      <span class="services__name">Литье</span>
                      <span class="services__price">от 7000 р.</span>
                   </div>
                </a>
                <a class="services__item" href="#!">
-                  <img class="services__img" src="images/content/services_8.webp" alt="Кровля">
+                  <div class="services__images _ibg">
+                     <img src="images/content/services_8.webp" alt="Кровля">
+                  </div>
                   <div class="services__box-content">
                      <span class="services__name">Зеркала</span>
                      <span class="services__price">от 5000 р.</span>
                   </div>
                </a>
                <a class="services__item" href="#!">
-                  <img class="services__img" src="images/content/services_9.webp" alt="Кровля">
+                  <div class="services__images _ibg">
+                     <img src="images/content/services_9.webp" alt="Кровля">
+                  </div>
                   <div class="services__box-content">
                      <span class="services__name">Партнёры</span>
                      <span class="services__price">от 6000 р.</span>
@@ -388,93 +339,59 @@
          </div>
       </div>
 
-      <div id="gallery" class="gallery">
-         <div class="container">
-            <div class="gallery__heading heading">
+      <div class="product-slide">
+         <div class="product-slide__container container">
+            <div class="product-slide__heading heading">
                <div class="heading__title">Галерея</div>
                <div class="heading__subtitle">Галерея</div>
             </div>
-            <div class="gallery__inner">
-               <div class="gallery__gira gira">
+
+            <div class="product-slide__inner">
+               <div class="product-slide__gira gira">
                   <div class="gira__name">Gira</div>
                </div>
-               <div class="swiper-button-next"></div>
-               <div class="swiper-button-prev"></div>
-               <div class="gallery-slider swiper-container">
-                  <div class="gallery-slider__wrapper swiper-wrapper">
-                     <div class="gallery-slider__slide swiper-slide">
-                        <div class="gallery-slider__image">
-                           <img class="gallery-slider__img" src="images/content/gallery_1.webp" alt="Картинка">
-                        </div>
+               <div class="product-slide-big">
+                  <div class="product-slide-big__slider">
+                     <div class="product-slide-big__item">
+                        <img class="product-slide-big__img" src="images/content/gallery_1.webp" alt="Картинка">
                      </div>
-                     <div class="gallery-slider__slide swiper-slide">
-                        <div class="gallery-slider__image">
-                           <img class="gallery-slider__img" src="images/content/gallery_2.webp" alt="Картинка">
-                        </div>
+                     <div class="product-slide-big__item">
+                        <img class="product-slide-big__img" src="images/content/gallery_2.webp" alt="Картинка">
                      </div>
-                     <div class="gallery-slider__slide swiper-slide">
-                        <div class="gallery-slider__image">
-                           <img class="gallery-slider__img" src="images/content/gallery_3.webp" alt="Картинка">
-                        </div>
+                     <div class="product-slide-big__item">
+                        <img class="product-slide-big__img" src="images/content/gallery_3.webp" alt="Картинка">
                      </div>
-                     <div class="gallery-slider__slide swiper-slide">
-                        <div class="gallery-slider__image">
-                           <img class="gallery-slider__img" src="images/content/gallery_4.webp" alt="Картинка">
-                        </div>
+                     <div class="product-slide-big__item">
+                        <img class="product-slide-big__img" src="images/content/gallery_4.webp" alt="Картинка">
                      </div>
-                     <div class="gallery-slider__slide swiper-slide">
-                        <div class="gallery-slider__image">
-                           <img class="gallery-slider__img" src="images/content/gallery_5.webp" alt="Картинка">
-                        </div>
+                     <div class="product-slide-big__item">
+                        <img class="product-slide-big__img" src="images/content/gallery_5.webp" alt="Картинка">
                      </div>
-                     <div class="gallery-slider__slide swiper-slide">
-                        <div class="gallery-slider__image">
-                           <img class="gallery-slider__img" src="images/content/gallery_1.webp" alt="Картинка">
-                        </div>
-                     </div>
-                     <div class="gallery-slider__slide swiper-slide">
-                        <div class="gallery-slider__image">
-                           <img class="gallery-slider__img" src="images/content/gallery_2.webp" alt="Картинка">
-                        </div>
+                     <div class="product-slide-big__item">
+                        <img class="product-slide-big__img" src="images/content/gallery_3.webp" alt="Картинка">
                      </div>
                   </div>
                </div>
-               <div class="gallery-mini-slider swiper-container">
-                  <div class="gallery-mini-slider__wrapper swiper-wrapper">
-                     <div class="gallery-mini-slider__slide swiper-slide">
-                        <div class="gallery-mini-slider__image">
-                           <img class="gallery-mini-slider__img" src="images/content/gallery_01.webp" alt="Париж">
-                        </div>
+
+               <div class="product-slide-thumb">
+                  <div class="product-slide-thumb__slider">
+                     <div class="product-slide-thumb__item">
+                        <img class="product-slide-thumb__img" src="images/content/gallery_1.webp" alt="">
                      </div>
-                     <div class="gallery-mini-slider__slide swiper-slide">
-                        <div class="gallery-mini-slider__image">
-                           <img class="gallery-mini-slider__img" src="images/content/gallery_02.webp" alt="Париж">
-                        </div>
+                     <div class="product-slide-thumb__item">
+                        <img class="product-slide-thumb__img" src="images/content/gallery_2.webp" alt="">
                      </div>
-                     <div class="gallery-mini-slider__slide swiper-slide">
-                        <div class="gallery-mini-slider__image">
-                           <img class="gallery-mini-slider__img" src="images/content/gallery_03.webp" alt="Париж">
-                        </div>
+                     <div class="product-slide-thumb__item">
+                        <img class="product-slide-thumb__img" src="images/content/gallery_3.webp" alt="">
                      </div>
-                     <div class="gallery-mini-slider__slide swiper-slide">
-                        <div class="gallery-mini-slider__image">
-                           <img class="gallery-mini-slider__img" src="images/content/gallery_04.webp" alt="Париж">
-                        </div>
+                     <div class="product-slide-thumb__item">
+                        <img class="product-slide-thumb__img" src="images/content/gallery_4.webp" alt="">
                      </div>
-                     <div class="gallery-mini-slider__slide swiper-slide">
-                        <div class="gallery-mini-slider__image">
-                           <img class="gallery-mini-slider__img" src="images/content/gallery_05.webp" alt="Париж">
-                        </div>
+                     <div class="product-slide-thumb__item">
+                        <img class="product-slide-thumb__img" src="images/content/gallery_5.webp" alt="">
                      </div>
-                     <div class="gallery-mini-slider__slide swiper-slide">
-                        <div class="gallery-mini-slider__image">
-                           <img class="gallery-mini-slider__img" src="images/content/gallery_01.webp" alt="Париж">
-                        </div>
-                     </div>
-                     <div class="gallery-mini-slider__slide swiper-slide">
-                        <div class="gallery-mini-slider__image">
-                           <img class="gallery-mini-slider__img" src="images/content/gallery_02.webp" alt="Париж">
-                        </div>
+                     <div class="product-slide-thumb__item">
+                        <img class="product-slide-thumb__img" src="images/content/gallery_3.webp" alt="">
                      </div>
                   </div>
                </div>
@@ -553,7 +470,7 @@
       </div>
 
    </footer>
-   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
    <script src="js/main.min.js"></script>
 </body>
 <!-- ©Верстка сделана Пенер Галиной 25 августа 2021 года -->

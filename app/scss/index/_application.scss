@@ -1,5 +1,6 @@
 .application {
-   padding: 85px 0 200px;
+   @include adaptiv-value("padding-top", 85, 60, 1);
+   @include adaptiv-value("padding-bottom", 200, 55, 1);
    background-color: #000;
    &__inner {
       display: flex;
@@ -20,11 +21,11 @@
    }
    &__title {
       @extend%roboto-700;
-      font-size: 30px;
-      line-height: 35px;
+      @include adaptiv-value("font-size", 30, 19, 1);
+      line-height: 35/30 * 100%;
       text-transform: uppercase;
       color: #fefefe;
-      margin-bottom: 18px;
+      @include adaptiv-value("margin-bottom", 18, 10, 1);
    }
    &__text {
       @extend%roboto-500;
@@ -34,8 +35,8 @@
    }
    &__text-color {
       @extend%roboto-500;
-      font-size: 22px;
-      line-height: 27px;
+      @include adaptiv-value("font-size", 22, 20, 1);
+      line-height: 27/22 * 100%;
       text-transform: uppercase;
       color: #edd28a;
    }
@@ -48,7 +49,7 @@
       height: 246px;
       padding: 10px;
       background-color: rgba(#fefdfb, 0.05);
-      margin-top: 84px;
+      @include adaptiv-value("margin-top", 84, 50, 1);
    }
    &__gira {
       position: absolute;
@@ -83,7 +84,6 @@
 
 @media (max-width: 992px) {
    .application {
-      padding: 85px 0 85px;
       &__gira {
          display: none;
       }
@@ -92,39 +92,11 @@
 
 @media (max-width: 768px) {
    .application {
-      &__gira {
-         display: none;
-      }
-      &__inner-form {
-         margin-top: 65px;
-      }
-   }
-}
-
-@media (max-width: 576px) {
-   .application {
-      padding: 80px 0 60px;
-      &__title {
-         font-size: 22px;
-         line-height: 27px;
-         margin-bottom: 10px;
-      }
-      &__text-color {
-         font-size: 20px;
-         line-height: 25px;
-      }
       &__inner-form {
          width: 100%;
-         margin-top: 45px;
       }
-   }
-}
-
-@media (max-width: 360px) {
-   .application {
-      padding: 50px 0 20px;
-      &__inner {
-         align-items: flex-start;
+      .form {
+         width: 100%;
       }
    }
 }

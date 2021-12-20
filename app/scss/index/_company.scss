@@ -1,8 +1,9 @@
 .company {
-   padding: 175px 0 145px;
+   @include adaptiv-value("padding-top", 175, 75, 1);
+   @include adaptiv-value("padding-bottom", 145, 80, 1);
    background-color: #000;
    &__heading {
-      margin-bottom: 75px;
+      @include adaptiv-value("margin-bottom", 75, 35, 1);
    }
    &__inner {
       display: flex;
@@ -18,15 +19,15 @@
       margin-right: 100px;
    }
    &__text {
-      font-size: 18px;
-      line-height: 28px;
+      @include adaptiv-value("font-size", 18, 16, 1);
+      line-height: 28/18 * 100%;
       color: #fefefd;
       & + & {
-         margin-top: 40px;
+         @include adaptiv-value("margin-top", 40, 35, 1);
       }
    }
    &__btn {
-      margin-top: 60px;
+      @include adaptiv-value("margin-top", 60, 45, 1);
    }
    &__box-img {
       max-width: 366px;
@@ -56,7 +57,6 @@
 
 @media (max-width: 1200px) {
    .company {
-      padding: 140px 0 125px;
       &__inner {
          flex-direction: column;
          align-items: center;
@@ -72,19 +72,12 @@
       }
       &__text {
          text-align: left;
-         & + & {
-            margin-top: 25px;
-         }
-      }
-      &__btn {
-         margin-top: 40px;
       }
    }
 }
 
 @media (max-width: 768px) {
    .company {
-      padding: 90px 0 100px;
       &__gira {
          display: none;
       }
@@ -97,27 +90,10 @@
    }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
    .company {
-      padding: 70px 0 80px;
-      &__heading {
-         margin-bottom: 35px;
-      }
-   }
-}
-
-@media (max-width: 360px) {
-   .company {
-      padding: 55px 0 65px;
-      &__heading {
-         margin-bottom: 25px;
-      }
-      &__text {
-         font-size: 17px;
-         line-height: 26px;
-      }
-      &__btn {
-         margin-top: 25px;
+      .btn {
+         width: 100%;
       }
    }
 }

@@ -1,37 +1,41 @@
 .services {
-   padding: 120px 0 120px;
+   @include adaptiv-value("padding-top", 120, 55, 1);
+   @include adaptiv-value("padding-bottom", 120, 60, 1);
    background-color: #0d0d0d;
    &__heading {
-      margin-bottom: 75px;
+      @include adaptiv-value("margin-bottom", 75, 35, 1);
    }
    &__wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      grid-gap: 18px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+      gap: 18px;
       position: relative;
    }
    &__gira {
       position: absolute;
       top: 44%;
-      left: -9%;
+      left: -15%;
       z-index: 5;
    }
    &__item {
-      width: 331px;
-      height: 331px;
       position: relative;
-      &:hover {
+      @media (any-hover: hover) {
+         &:hover {
+            .services__box-content {
+               opacity: 1;
+            }
+         }
+      }
+      @media (any-hover: none) {
          .services__box-content {
             opacity: 1;
          }
       }
    }
-   &__img {
-      width: 331px;
-      height: 331px;
-      object-fit: cover;
-      object-position: center;
+   &__images {
+      overflow: hidden;
+      @include adaptiv-value("min-width", 331, 220, 1);
+      @include adaptiv-value("height", 331, 220, 1);
    }
    &__box-content {
       display: flex;
@@ -52,21 +56,21 @@
    &__name {
       display: block;
       @extend%roboto-700;
-      font-size: 25px;
-      line-height: 30px;
+      @include adaptiv-value("font-size", 25, 21, 1);
+      line-height: 30/25 * 100%;
       text-transform: uppercase;
       color: #edd28a;
    }
    &__price {
       display: block;
       @extend%roboto-300;
-      font-size: 20px;
-      line-height: 22px;
+      @include adaptiv-value("font-size", 20, 18, 1);
+      line-height: 22/20 * 100%;
       color: #fefefe;
    }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1330px) {
    .services {
       &__gira {
          display: none;
@@ -74,49 +78,10 @@
    }
 }
 
-@media (max-width: 768px) {
-   .services {
-      padding: 80px 0 80px;
-      &__item {
-         width: 231px;
-         height: 231px;
-      }
-      &__img {
-         width: 231px;
-         height: 231px;
-      }
-   }
-}
-
-@media (max-width: 450px) {
-   .services {
-      padding: 55px 0 65px;
-      &__heading {
-         margin-bottom: 50px;
-      }
-   }
-}
-
 @media (max-width: 360px) {
    .services {
-      &__item {
-         width: 131px;
-         height: 131px;
-      }
-      &__img {
-         width: 131px;
-         height: 131px;
-      }
       &__box-content {
          border: 6px solid #edd28a;
-      }
-      &__name {
-         font-size: 18px;
-         line-height: 23px;
-      }
-      &__price {
-         font-size: 14px;
-         line-height: 16px;
       }
    }
 }

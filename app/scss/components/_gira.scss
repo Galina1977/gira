@@ -1,5 +1,5 @@
 .gira {
-   max-width: 265px;
+   max-width: 290px;
    transform: rotate(-90deg);
    padding: 0 20px;
    &::before,
@@ -9,16 +9,16 @@
       width: 1px;
       height: 267px;
       opacity: 0.29;
-      background-color: #ffffff;
+      background-color: #fff;
       position: absolute;
-      top: -64%;
+      top: -95px;
       transform: rotate(-90deg);
    }
    &::before {
-      left: -45%;
+      left: -140px;
    }
    &::after {
-      right: -30%;
+      right: -140px;
    }
    &__name {
       @extend%roboto-700;
